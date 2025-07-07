@@ -1,0 +1,32 @@
+<!-- Selettore lingua -->
+<select (change)="switchLanguage($event)" class="form-select w-auto d-inline-block mt-2 ms-2">
+  <option value="it">{{ 'FORM.LANGUAGE_SELECT.IT' | translate }}</option>
+  <option value="en">{{ 'FORM.LANGUAGE_SELECT.EN' | translate }}</option>
+</select>
+
+<!-- Pagina -->
+<div class="min-vh-100 bg-light d-flex flex-column">
+  <!-- Header -->
+  <header class="bg-primary text-white py-5 shadow-sm">
+    <div class="container text-center">
+      <h1 class="display-5 fw-bold">{{ 'FORM.TITLE' | translate }}</h1>
+      <p class="lead">{{ 'FORM.SUBTITLE' | translate }}</p>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="flex-grow-1 d-flex align-items-center justify-content-center">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <fervo-address-form></fervo-address-form>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3 mt-auto">
+    <small>&copy; {{ currentYear }} Fervo Weather App.</small>
+  </footer>
+</div>

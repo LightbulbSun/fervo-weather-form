@@ -1,0 +1,29 @@
+{
+  "FORM": {
+    "TITLE": "Fervo Weather Form",
+    "SUBTITLE": "Welcome! Enter an address to view the temperature history",
+    "LANGUAGE_SELECT": {
+      "IT": "🇮🇹 Italian",
+      "EN": "🇬🇧 English"
+    },
+    "FOOTER": "All rights reserved.",
+    "STREET": "Street",
+    "STREET_PLACEHOLDER": "Street and house number",
+    "ZIP": "ZIP Code",
+    "ZIP_PLACEHOLDER": "Ex: 00100",
+    "CITY": "City",
+    "CITY_PLACEHOLDER": "City",
+    "PROVINCE": "Province",
+    "PROVINCE_PLACEHOLDER": "Province (e.g. RM)",
+    "COUNTRY": "Country",
+    "COUNTRY_PLACEHOLDER": "Country (e.g. Italy)",
+    "START_DATE": "Start Date",
+    "END_DATE": "End Date",
+    "SUBMIT": "Search",
+    "RESET": "Clear All",
+    "DOWNLOAD": "Download Weather Data JSON",
+    "DOWNLOAD_NOTE": "The download only provides weather data for last year (January 1st – December 31st).",
+    "GRAPH_TITLE": "Temperature Chart",
+    "LOADING": "Loading..."
+  }
+}

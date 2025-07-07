@@ -1,0 +1,29 @@
+{
+  "FORM": {
+    "TITLE": "Fervo Weather Form",
+    "SUBTITLE": "Benvenuto! Inserisci un indirizzo per visualizzare lo storico delle temperature",
+    "LANGUAGE_SELECT": {
+      "IT": "🇮🇹 Italiano",
+      "EN": "🇬🇧 Inglese"
+    },
+    "FOOTER": "Tutti i diritti riservati.",
+    "STREET": "Via",
+    "STREET_PLACEHOLDER": "Via e numero civico",
+    "ZIP": "CAP",
+    "ZIP_PLACEHOLDER": "Es: 00100",
+    "CITY": "Città",
+    "CITY_PLACEHOLDER": "Città",
+    "PROVINCE": "Provincia",
+    "PROVINCE_PLACEHOLDER": "Provincia (es: RM)",
+    "COUNTRY": "Nazione",
+    "COUNTRY_PLACEHOLDER": "Nazione (es: Italia)",
+    "START_DATE": "Data inizio",
+    "END_DATE": "Data fine",
+    "SUBMIT": "Cerca",
+    "RESET": "Pulisci tutto",
+    "DOWNLOAD": "Scarica dati meteo JSON",
+    "DOWNLOAD_NOTE": "Il download fornisce solo i dati meteo relativi all’anno scorso (1° gennaio – 31 dicembre).",
+    "GRAPH_TITLE": "Grafico delle Temperature",
+    "LOADING": "Caricamento..."
+  }
+}

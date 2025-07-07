@@ -1,0 +1,110 @@
+<form [formGroup]="addressForm" (ngSubmit)="onSubmit()" class="p-4 bg-light rounded shadow-sm" [class.opacity-50]="loading">
+  <div class="form-group">
+    <div class="row g-3 mb-3">
+      <div class="col-md-6">
+        <label for="street" class="form-label fw-semibold">
+          {{ 'FORM.STREET' | translate }} <span class="text-danger">*</span>
+        </label>
+        <input id="street" type="text" class="form-control"
+               formControlName="street"
+               [placeholder]="'FORM.STREET_PLACEHOLDER' | translate"
+               [ngClass]="{ 'is-invalid': addressForm.get('street')?.invalid && addressForm.get('street')?.touched }" />
+      </div>
+
+      <div class="col-md-3">
+        <label for="zip" class="form-label fw-semibold">
+          {{ 'FORM.ZIP' | translate }} <span class="text-danger">*</span>
+        </label>
+        <input id="zip" type="text" class="form-control"
+               formControlName="zip"
+               [placeholder]="'FORM.ZIP_PLACEHOLDER' | translate"
+               [ngClass]="{ 'is-invalid': addressForm.get('zip')?.invalid && addressForm.get('zip')?.touched }" />
+      </div>
+
+      <div class="col-md-3">
+        <label for="city" class="form-label fw-semibold">
+          {{ 'FORM.CITY' | translate }} <span class="text-danger">*</span>
+        </label>
+        <input id="city" type="text" class="form-control"
+               formControlName="city"
+               [placeholder]="'FORM.CITY_PLACEHOLDER' | translate"
+               [ngClass]="{ 'is-invalid': addressForm.get('city')?.invalid && addressForm.get('city')?.touched }" />
+      </div>
+    </div>
+
+    <div class="row g-3 mb-3">
+      <div class="col-md-6">
+        <label for="province" class="form-label fw-semibold">
+          {{ 'FORM.PROVINCE' | translate }}
+        </label>
+        <input id="province" type="text" class="form-control"
+               [placeholder]="'FORM.PROVINCE_PLACEHOLDER' | translate"
+               formControlName="province"
+               [ngClass]="{ 'is-invalid': addressForm.get('province')?.invalid && addressForm.get('province')?.touched }" />
+      </div>
+
+      <div class="col-md-6">
+        <label for="country" class="form-label fw-semibold">
+          {{ 'FORM.COUNTRY' | translate }}
+        </label>
+        <input id="country" type="text" class="form-control"
+               [placeholder]="'FORM.COUNTRY_PLACEHOLDER' | translate"
+               formControlName="country"
+               [ngClass]="{ 'is-invalid': addressForm.get('country')?.invalid && addressForm.get('country')?.touched }" />
+      </div>
+    </div>
+
+    <div class="row g-3 mb-3">
+      <div class="col-md-6">
+        <label for="startDate" class="form-label fw-semibold">
+          {{ 'FORM.START_DATE' | translate }}
+        </label>
+        <input id="startDate" type="date" class="form-control"
+               formControlName="startDate"
+               [ngClass]="{ 'is-invalid': addressForm.get('startDate')?.invalid && addressForm.get('startDate')?.touched }" />
+      </div>
+
+      <div class="col-md-6">
+        <label for="endDate" class="form-label fw-semibold">
+          {{ 'FORM.END_DATE' | translate }}
+        </label>
+        <input id="endDate" type="date" class="form-control"
+               formControlName="endDate"
+               [ngClass]="{ 'is-invalid': addressForm.get('endDate')?.invalid && addressForm.get('endDate')?.touched }" />
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex flex-wrap gap-2 align-items-center">
+    <button type="submit" class="btn btn-primary" [disabled]="addressForm.invalid || loading">
+      {{ 'FORM.SUBMIT' | translate }}
+    </button>
+    <button type="button" class="btn btn-outline-secondary" (click)="resetForm()">
+      {{ 'FORM.RESET' | translate }}
+    </button>
+    <button type="button" class="btn btn-success" (click)="downloadWeatherData()">
+      {{ 'FORM.DOWNLOAD' | translate }}
+    </button>
+  </div>
+
+  <small class="text-muted d-block mt-3">
+    {{ 'FORM.DOWNLOAD_NOTE' | translate }}
+  </small>
+
+  <div *ngIf="dateError" class="text-danger mt-2 fw-semibold">
+    {{ dateError }}
+  </div>
+</form>
+
+<div class="card shadow-sm mt-4" *ngIf="!!weatherData">
+  <div class="card-body">
+    <h4 class="card-title text-center mb-3">{{ 'FORM.GRAPH_TITLE' | translate }}</h4>
+    <fervo-weather-chart [weatherData]="weatherData"></fervo-weather-chart>
+  </div>
+</div>
+
+<div *ngIf="loading" class="text-center my-4">
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">{{ 'FORM.LOADING' | translate }}</span>
+  </div>
+</div>
