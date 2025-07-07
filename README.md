@@ -1,27 +1,95 @@
-# FervoWeatherForm
+# 🌦️ Fervo Weather Form
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.11.
+An Angular application that allows users to input an address and visualize historical weather data (temperature and precipitation) in a dynamic chart. The app uses geocoding via OpenCage and weather data from Open-Meteo.
 
-## Development server
+## 🚀 Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Responsive form with address fields
+- Date range input and validation
+- Dynamic chart generation with temperature data
+- JSON export of past year's weather data
+- Loading spinner and error handling
+- Internationalization (i18n) support for Italian 🇮🇹 and English 🇬🇧
 
-## Code scaffolding
+## 📦 Technologies
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular 15
+- Bootstrap 5
+- ngx-echarts
+- @ngx-translate/core
+- OpenCage API
+- Open-Meteo API
 
-## Build
+---
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 📁 Project Structure
 
-## Running unit tests
+fervo-weather-form/
+├── src/
+│ ├── app/
+│ │ ├── components/
+│ │ │ ├── address-form/ # Main form component
+│ │ │ ├── weather-chart/ # Weather chart display component
+│ │ ├── services/
+│ │ │ ├── geocoding.service.ts
+│ │ │ └── weather.service.ts
+│ │ ├── app.module.ts
+│ │ └── app.component.ts/html
+│ ├── assets/
+│ │ └── i18n/
+│ │ ├── en.json
+│ │ └── it.json
+│ └── environments/
+│ └── environment.ts
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+---
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## ⚙️ Installation & Setup
 
-## Further help
+### Prerequisites
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Node.js v18+ and npm
+- Angular CLI
+
+### Step-by-step
+
+1. **Clone the repository:**
+
+```bash
+git clone https://github.com/yourusername/fervo-weather-form.git
+cd fervo-weather-form
+
+2. Install dependencies:
+
+npm install
+
+3. Set your API key:
+
+Add your OpenCage API key to src/environments/environment.ts:
+
+export const environment = {
+  production: false,
+  opencageApiKey: 'YOUR_OPENCAGE_API_KEY'
+}
+
+4. Run the application:
+
+ng serve
+Then open your browser at http://localhost:4200
+
+
+🌐 Change Language
+Use the dropdown menu at the top to switch between Italian 🇮🇹 and English 🇬🇧.
+
+You can add more languages in the assets/i18n/ folder and update TranslateModule accordingly.
+
+📤 Export Weather Data
+Click the green "Download Weather JSON" button after submitting a valid address and date range. The app will generate and download the data for the previous year (Jan 1st – Dec 31st).
+
+🧪 Development Tools
+
+To build the project:
+ng build
+
+
