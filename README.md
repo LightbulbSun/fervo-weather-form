@@ -24,9 +24,24 @@ An Angular application that allows users to input an address and visualize histo
 
 ## 📁 Project Structure
 
-<pre> ``` 📁 Project Structure fervo-weather-form/ ├── src/ │ ├── app/ │ │ ├── components/ │ │ │ ├── address-form/ # Main form component │ │ │ ├── weather-chart/ # Weather chart display component │ │ ├── services/ │ │ │ ├── geocoding.service.ts │ │ │ └── weather.service.ts │ │ ├── app.module.ts │ │ └── app.component.ts/html │ ├── assets/ │ │ └── i18n/ │ │ ├── en.json │ │ └── it.json │ └── environments/ │ └── environment.ts ``` </pre>
-
----
+```txt
+fervo-weather-form/
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   │   ├── address-form/
+│   │   │   └── weather-chart/
+│   │   ├── services/
+│   │   │   ├── geocoding.service.ts
+│   │   │   └── weather.service.ts
+│   │   ├── app.module.ts
+│   │   └── app.component.ts
+│   ├── assets/
+│   │   └── i18n/
+│   │       ├── en.json
+│   │       └── it.json
+│   └── environments/
+│       └── environment.ts
 
 ## ⚙️ Installation & Setup
 
