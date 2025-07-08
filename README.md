@@ -42,6 +42,7 @@ fervo-weather-form/
 │   │       └── it.json
 │   └── environments/
 │       └── environment.ts
+```
 
 ## ⚙️ Installation & Setup
 
